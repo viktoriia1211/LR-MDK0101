@@ -47,5 +47,12 @@ namespace BMI
             else if (category == "Избыточный вес") return "Увеличьте физическую активность.";
             else return "Обратитесь к врачу.";
         }
+        public static void PrintResults(double bmi, string category, string recommendation)
+        {
+            Console.WriteLine();
+            Console.WriteLine($"ИМТ: {bmi:F1}");
+            Console.WriteLine($"Категория: {category}");
+            Console.WriteLine($"Рекомендация: {recommendation}");
+        }
     }
 }
