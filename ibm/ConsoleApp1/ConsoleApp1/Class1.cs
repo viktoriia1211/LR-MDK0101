@@ -40,5 +40,12 @@ namespace BMI
             else if (bmi < 30) return "Избыточный вес";
             else return "Ожирение";
         }
+        public static string GetRecommendation(string category)
+        {
+            if (category == "Недостаточный вес") return "Увеличьте калорийность рациона.";
+            else if (category == "Норма") return "Поддерживайте текущий образ жизни.";
+            else if (category == "Избыточный вес") return "Увеличьте физическую активность.";
+            else return "Обратитесь к врачу.";
+        }
     }
 }
