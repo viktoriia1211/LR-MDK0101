@@ -17,7 +17,7 @@ namespace BMI
             string category = Class1.GetCategory(bmi);
             string recommendation = Class1.GetRecommendation(category);
             Class1.PrintResults(bmi, category, recommendation);
-            Console.ReadKey();
+            Console.ReadKey() ;
         }
     }
 }
