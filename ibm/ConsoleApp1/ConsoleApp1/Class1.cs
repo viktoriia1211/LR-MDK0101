@@ -25,7 +25,7 @@ namespace BMI
                 Console.WriteLine("Введите вес (кг):");
                 if (double.TryParse(Console.ReadLine(), out double weight) && weight > 0)
                     return weight;
-                Console.WriteLine("Ошибка! Введите положительное число");
+                Console.WriteLine("Ошибка! Введите положительное число") ;
             }
         }
 
