@@ -33,6 +33,12 @@ namespace BMI
             double heightM = heightCm / 100.0;
             return weightKg / (heightM * heightM);
         }
-
+        public static string GetCategory(double bmi)
+        {
+            if (bmi < 18.5) return "Недостаточный вес";
+            else if (bmi < 25) return "Норма";
+            else if (bmi < 30) return "Избыточный вес";
+            else return "Ожирение";
+        }
     }
 }
