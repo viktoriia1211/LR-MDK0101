@@ -28,6 +28,11 @@ namespace BMI
                 Console.WriteLine("Ошибка! Введите положительное число");
             }
         }
+        public static double CalculateBMI(double heightCm, double weightKg)
+        {
+            double heightM = heightCm / 100.0;
+            return weightKg / (heightM * heightM);
+        }
 
     }
 }
