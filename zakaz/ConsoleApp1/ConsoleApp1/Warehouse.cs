@@ -19,5 +19,30 @@ namespace ConsoleApp1
                 Console.WriteLine($"{i + 1}. {partNames[i]} — {partPrices[i]} руб., {partQuantities[i]} шт.");
             }
         }
+        public int GetPartNumber()
+        {
+            int number;
+            while (true)
+            {
+                Console.Write("Введите номер запчасти (0 - конец заказа): ");
+                string input = Console.ReadLine();
+
+                if (int.TryParse(input, out number))
+                {
+                    if (number >= 0 && number <= 5)
+                    {
+                        return number;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ошибка: номер должен быть от 0 до 5.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Ошибка: введено не число.");
+                }
+            }
+        }
     }
 }
