@@ -70,7 +70,7 @@ namespace ConsoleApp1
             }
         }
         public bool ProcessOrder(int[] order)
-        {
+        { 
             for (int i = 0; i < order.Length; i++)
             {
                 if (order[i] > partQuantities[i])
@@ -89,5 +89,13 @@ namespace ConsoleApp1
             Console.WriteLine($"Стоимость заказа: {totalCost} руб.");
             return true;
         }
+        public void UpdateInventory(int[] order)
+        {
+            for (int i = 0; i < order.Length; i++)
+            {
+                partQuantities[i] -= order[i];
+            }
+        }
     }
+
 }
