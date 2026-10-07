@@ -69,5 +69,25 @@ namespace ConsoleApp1
                 }
             }
         }
+        public bool ProcessOrder(int[] order)
+        {
+            for (int i = 0; i < order.Length; i++)
+            {
+                if (order[i] > partQuantities[i])
+                {
+                    Console.WriteLine($"Ошибка: запчасти \"{partNames[i]}\" не хватает. На складе: {partQuantities[i]}, заказано: {order[i]}");
+                    return false;
+                }
+            }
+
+            decimal totalCost = 0;
+            for (int i = 0; i < order.Length; i++)
+            {
+                totalCost += order[i] * partPrices[i];
+            }
+
+            Console.WriteLine($"Стоимость заказа: {totalCost} руб.");
+            return true;
+        }
     }
 }
