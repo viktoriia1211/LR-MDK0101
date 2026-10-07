@@ -11,14 +11,36 @@ namespace zakaz
     {
         static void Main(string[] args)
         {
+
             Warehouse warehouse = new Warehouse();
-
             warehouse.PrintInventory();
-            int testNumber = warehouse.GetPartNumber();
-            Console.WriteLine($"Вы ввели номер: {testNumber}");
-            int testQuantity = warehouse.GetQuantity();
-            Console.WriteLine($"Вы ввели количество: {testQuantity}");
+            int[] order = new int[5];
+            while (true)
+            {
+                int partNumber = warehouse.GetPartNumber();
+                if (partNumber == 0)
+                {
+                    break;
+                }
+                int quantity = warehouse.GetQuantity();
+                order[partNumber - 1] += quantity;
+                Console.WriteLine("(Для завершения заказа введите 0)");
+            }
 
+            bool success = warehouse.ProcessOrder(order);
+
+            if (success)
+            {
+                warehouse.UpdateInventory(order);
+                Console.WriteLine("\nОстатки запчастей:");
+                warehouse.PrintInventory();
+            }
+            else
+            {
+                Console.WriteLine("\nЗаказ не выполнен. Остатки не изменены.");
+            }
+
+            Console.WriteLine("\nНажмите любую клавишу для выхода...");
             Console.ReadKey();
         }
     }

@@ -24,7 +24,7 @@ namespace ConsoleApp1
             int number;
             while (true)
             {
-                Console.Write("Введите номер запчасти (0 - 5): ");
+                Console.Write("Введите номер запчасти (0 - конец заказа): ");
                 string input = Console.ReadLine();
 
                 if (int.TryParse(input, out number))
@@ -43,6 +43,7 @@ namespace ConsoleApp1
                      Console.WriteLine("Ошибка: введено не число.");
                 }
             }
+
         }
         public int GetQuantity()
         {
@@ -76,7 +77,7 @@ namespace ConsoleApp1
                 if (order[i] > partQuantities[i])
                 {
                     Console.WriteLine($"Ошибка: запчасти \"{partNames[i]}\" не хватает. На складе: {partQuantities[i]}, заказано: {order[i]}");
-                    return false;
+                    return false; 
                 }
             }
 
@@ -96,6 +97,7 @@ namespace ConsoleApp1
                 partQuantities[i] -= order[i];
             }
         }
+    
     }
 
 }
