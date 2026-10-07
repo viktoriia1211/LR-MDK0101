@@ -14,6 +14,11 @@ namespace zakaz
             Warehouse warehouse = new Warehouse();
 
             warehouse.PrintInventory();
+            int testNumber = warehouse.GetPartNumber();
+            Console.WriteLine($"Вы ввели номер: {testNumber}");
+            int testQuantity = warehouse.GetQuantity();
+            Console.WriteLine($"Вы ввели количество: {testQuantity}");
+
             Console.ReadKey();
         }
     }

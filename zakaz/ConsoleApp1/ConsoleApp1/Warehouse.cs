@@ -24,7 +24,7 @@ namespace ConsoleApp1
             int number;
             while (true)
             {
-                Console.Write("Введите номер запчасти (0 - конец заказа): ");
+                Console.Write("Введите номер запчасти (0 - 5): ");
                 string input = Console.ReadLine();
 
                 if (int.TryParse(input, out number))
@@ -36,6 +36,31 @@ namespace ConsoleApp1
                     else
                     {
                         Console.WriteLine("Ошибка: номер должен быть от 0 до 5.");
+                    }
+                }
+                else
+                {
+                     Console.WriteLine("Ошибка: введено не число.");
+                }
+            }
+        }
+        public int GetQuantity()
+        {
+            int quantity;
+            while (true)
+            {
+                Console.Write("Введите количество: ");
+                string input = Console.ReadLine();
+
+                if (int.TryParse(input, out quantity))
+                {
+                    if (quantity > 0)
+                    {
+                        return quantity;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ошибка: количество должно быть больше 0.");
                     }
                 }
                 else
