@@ -14,7 +14,6 @@ namespace zakaz
             Warehouse warehouse = new Warehouse();
 
             warehouse.PrintInventory();
-
             Console.ReadKey();
         }
     }
