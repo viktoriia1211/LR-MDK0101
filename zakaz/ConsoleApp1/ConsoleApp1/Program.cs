@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,11 @@ namespace zakaz
     {
         static void Main(string[] args)
         {
+            Warehouse warehouse = new Warehouse();
+
+            warehouse.PrintInventory();
+
+            Console.ReadKey();
         }
     }
 }
