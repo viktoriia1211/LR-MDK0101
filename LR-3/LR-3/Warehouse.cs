@@ -21,5 +21,13 @@ namespace LR_3
                 new SparePart(PartType.Antifreeze, "антифриз", 750, 12)
             };
         }
+        public void PrintInventory()
+        {
+            Console.WriteLine("Склад запчастей:");
+            foreach (var part in Parts)
+            {
+                Console.WriteLine($"{(int)part.Type}. {part.Name} — {part.Price} руб., {part.Quantity} шт.");
+            }
+        }
     }
 }
