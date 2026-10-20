@@ -47,7 +47,7 @@ namespace LR_3
                 else
                     order[selectedPart] = quantity;
             }
-            if (order.Count > 0)
+            if (order.Count > 0) 
             {
                 warehouse.ProcessOrder(order);
             }
