@@ -29,5 +29,28 @@ namespace LR_3
                 Console.WriteLine($"{(int)part.Type}. {part.Name} — {part.Price} руб., {part.Quantity} шт.");
             }
         }
+        public bool ProcessOrder(Dictionary<PartType, int> order)
+        {
+            foreach (var item in order)
+            {
+                var part = Parts.Find(p => p.Type == item.Key);
+                if (part.Quantity < item.Value)
+                {
+                    Console.WriteLine($"Ошибка: не хватает '{part.Name}'. На складе: {part.Quantity}, нужно: {item.Value}");
+                    return false; // Заказ не принят
+                }
+            }
+
+            int totalCost = 0;
+            foreach (var item in order)
+            {
+                var part = Parts.Find(p => p.Type == item.Key);
+                part.Quantity -= item.Value; // Списание
+                totalCost += part.Price * item.Value;
+            }
+
+            Console.WriteLine($"Стоимость заказа: {totalCost} руб.");
+            return true; // Заказ принят
+        }
     }
 }
