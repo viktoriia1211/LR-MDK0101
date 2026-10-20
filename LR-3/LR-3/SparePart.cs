@@ -13,6 +13,12 @@ namespace LR_3
         public int Price { get; set; }     // Цена
         public int Quantity { get; set; }  // Количество на складе
 
-      
+        public SparePart(PartType type, string name, int price, int quantity)
+        {
+            Type = type;
+            Name = name;
+            Price = price;
+            Quantity = quantity;
+        }
     }
 }
