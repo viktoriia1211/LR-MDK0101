@@ -26,19 +26,20 @@ namespace Наследование
             earrings.SetAmount(55);
 
             Perfumery oboem = new Perfumery();
-            oboem.SetName("Овсянка");
+            oboem.SetName("Одеколон");
             oboem.SetPrice(300);
             oboem.SetAmount(7);
 
             Perfumery flora = new Perfumery();
-            flora.SetName("Чай 'Флора'");
+            flora.SetName("Цветочный парфюм");
             flora.SetPrice(480);
             flora.SetAmount(27);
 
             Perfumery luxury = new Perfumery();
-            luxury.SetName("Чай 'Люкс'");
+            luxury.SetName("Парфюм Люкс");
             luxury.SetPrice(890);
             luxury.SetAmount(70);
+       
         }
     }
 }
