@@ -10,6 +10,14 @@ namespace Наследование
     {
         public override int FindDiscount()
         {
+            if (Amount_ >= 5 && Amount_ <= 10)
+            {
+                return 15;
+            }
+            else if (Amount_ > 10)
+            {
+                return 25;
+            }
             return 0;
         }
     }
