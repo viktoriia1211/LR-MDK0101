@@ -39,6 +39,30 @@ namespace Наследование
             luxury.SetName("Парфюм Люкс");
             luxury.SetPrice(890);
             luxury.SetAmount(70);
+            Console.WriteLine("Название        | Цена     | Кол-во   | Стоимость    | Скидка     | Итого     ");
+            Console.WriteLine(" ");
+            PrintInfo(ring);
+            PrintInfo(pendant);
+            PrintInfo(earrings);
+            PrintInfo(oboem);
+            PrintInfo(flora);
+            PrintInfo(luxury);
+            Console.ReadKey();
+
+        }
+        static void PrintInfo(Product item)
+        {
+            double totalCost = item.Price_ * item.Amount_;
+            int discountPercent = item.FindDiscount();
+            double finalCost = totalCost - (totalCost * discountPercent / 100.0);
+            string name = item.Name_.PadRight(15);
+            string price = item.Price_.ToString().PadRight(8);
+            string amount = item.Amount_.ToString().PadRight(8);
+            string cost = totalCost.ToString().PadRight(12);
+            string discount = (discountPercent + "%").PadRight(10);
+            string final = finalCost.ToString().PadRight(10);
+
+            Console.WriteLine($"{name} | {price} | {amount} | {cost} | {discount} | {final}");
         }
 
     }
