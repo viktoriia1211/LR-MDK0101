@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Наследование
 {
-    internal class Accessories
+    public class Accessories : Product
     {
+        public override int FindDiscount()
+        {
+            return 0;
+        }
     }
 }
