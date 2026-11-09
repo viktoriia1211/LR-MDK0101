@@ -31,7 +31,7 @@ namespace Наследование
             oboem.SetAmount(7);
 
             Perfumery flora = new Perfumery();
-            flora.SetName("Цветочный парфюм");
+            flora.SetName("Парфюм флора");
             flora.SetPrice(480);
             flora.SetAmount(27);
 
@@ -39,7 +39,7 @@ namespace Наследование
             luxury.SetName("Парфюм Люкс");
             luxury.SetPrice(890);
             luxury.SetAmount(70);
-       
         }
+
     }
 }
