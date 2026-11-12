@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace CSV
 {
-    internal class Accessories
+    public class Accessories : Product
     {
+        public override int FindDiscount()
+        {
+            if (Amount_ >= 20 && Amount_ <= 150) return 10;
+            if (Amount_ >= 150 && Amount_ <= 300) return 30;
+            if (Amount_ > 300) return 50;
+            return 0;
+        }
     }
 }
