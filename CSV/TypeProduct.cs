@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CSV
 {
-    internal class TypeProduct
+    public enum TypeProduct
     {
+        Accessories,
+        Perfumery
     }
 }
