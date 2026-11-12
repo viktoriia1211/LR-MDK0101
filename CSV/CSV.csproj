@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Accessories.cs" />
     <Compile Include="CsvReader.cs" />
+    <Compile Include="CsvWriter.cs" />
     <Compile Include="Perfumery.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
