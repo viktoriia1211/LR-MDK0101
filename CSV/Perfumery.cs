@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CSV
 {
-    internal class Perfumery
+    public class Perfumery : Product
     {
+        public override int FindDiscount()
+        {
+            if (Amount_ >= 5 && Amount_ <= 10) return 15;
+            if (Amount_ > 10) return 25;
+            return 0;
+        }
     }
 }
