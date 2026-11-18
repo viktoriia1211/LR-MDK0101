@@ -8,5 +8,7 @@ namespace CSV
 {
     public class Diagram
     {
+
+
     }
 }
