@@ -20,7 +20,7 @@ namespace CSV
             using (StreamReader reader = new StreamReader(filePath))
             {
                 string line;
-                bool isFirstLine = true;
+                bool isFirstLine =  true;
 
                 while ((line = reader.ReadLine()) != null)
                 {

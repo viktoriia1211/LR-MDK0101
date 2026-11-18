@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="CSV.Product" Collapsed="true">
-    <Position X="1" Y="1.75" Width="1.5" />
+    <Position X="1" Y="1.75" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAABEAAACACAAAQAAAAAAAAgQAAQBAA=</HashCode>
       <FileName>Product.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CSV.Accessories" Collapsed="true">
-    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Accessories.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CSV.Perfumery" Collapsed="true">
-    <Position X="3" Y="2.75" Width="1.5" />
+    <Position X="6.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Perfumery.cs</FileName>
